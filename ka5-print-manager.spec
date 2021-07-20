@@ -76,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/org.kde.kde-add-printer.desktop
 %{_datadir}/knotifications5/printmanager.notifyrc
 %{_datadir}/kservices5/kcm_printer_manager.desktop
-%{_datadir}/kservices5/plasma-applet-org.kde.plasma.printmanager.desktop
+#%{_datadir}/kservices5/plasma-applet-org.kde.plasma.printmanager.desktop
 %{_datadir}/metainfo/org.kde.plasma.printmanager.appdata.xml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kded/printmanager.so
