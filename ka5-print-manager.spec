@@ -1,15 +1,15 @@
-%define		kdeappsver	21.12.0
+%define		kdeappsver	21.12.1
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		print-manager
 Summary:	Print manager
 Name:		ka5-%{kaname}
-Version:	21.12.0
+Version:	21.12.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	164d5b30db13dd25e9f7fd0c22c30194
+# Source0-md5:	967b02b185b69d3ae8f10308c95ca987
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	cmake >= 2.8.12
@@ -80,3 +80,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kded/printmanager.so
 %{_datadir}/metainfo/org.kde.print-manager.metainfo.xml
+%{_datadir}/kservices5/plasma-applet-org.kde.plasma.printmanager.desktop
