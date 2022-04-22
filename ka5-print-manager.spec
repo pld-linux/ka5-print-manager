@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	21.12.3
+%define		kdeappsver	22.04.0
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		print-manager
 Summary:	Print manager
 Name:		ka5-%{kaname}
-Version:	21.12.3
+Version:	22.04.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	ff9f8b54bca9438a59d12aff1a6a12dc
+# Source0-md5:	5954dbd87d4383102099ecd1b5b5c653
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	cmake >= 2.8.12
@@ -76,7 +76,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kde-add-printer
 %attr(755,root,root) %{_bindir}/kde-print-queue
 %attr(755,root,root) %{_libdir}/libkcupslib.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/kcm_printer_manager.so
 %dir %{_libdir}/qt5/qml/org/kde/plasma/printmanager
 %attr(755,root,root) %{_libdir}/qt5/qml/org/kde/plasma/printmanager/libprintmanager.so
 %{_libdir}/qt5/qml/org/kde/plasma/printmanager/qmldir
@@ -84,9 +83,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/org.kde.PrintQueue.desktop
 %{_desktopdir}/org.kde.kde-add-printer.desktop
 %{_datadir}/knotifications5/printmanager.notifyrc
-%{_datadir}/kservices5/kcm_printer_manager.desktop
 %{_datadir}/metainfo/org.kde.plasma.printmanager.appdata.xml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kded/printmanager.so
 %{_datadir}/metainfo/org.kde.print-manager.metainfo.xml
-%{_datadir}/kservices5/plasma-applet-org.kde.plasma.printmanager.desktop
+%attr(755,root,root) %{_libdir}/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_printer_manager.so
+%{_desktopdir}/kcm_printer_manager.desktop
